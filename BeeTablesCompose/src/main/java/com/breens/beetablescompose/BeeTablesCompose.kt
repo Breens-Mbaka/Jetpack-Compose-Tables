@@ -16,6 +16,22 @@ import com.breens.beetablescompose.components.TableHeaderComponent
 import com.breens.beetablescompose.components.TableRowComponent
 import com.breens.beetablescompose.utils.extractMembers
 
+/**
+ * 🐝 A Compose UI data table library.
+ *
+ * @param data The list of data items to display in the table.
+ * @param headerTableTitles The list of header titles to display at the top of the table.
+ * @param headerTitlesBorderColor The color of the border for the header titles, by default it will be [Color.LightGray].
+ * @param headerTitlesBorderWidth The width of the border for the header titles in DP, by default it will be "0.4.dp".
+ * @param headerTitlesTextStyle The text style to apply to the header titles, by default it will be [MaterialTheme.typography.bodySmall].
+ * @param headerTitlesBackGroundColor The background color for the header titles, by default it will be [Color.White].
+ * @param tableRowColors The list of background colors to alternate between rows in the table, by default it will be a list of: [Color.White], [Color.White].
+ * @param rowBorderColor The color of the border for the table rows, by default it will be [Color.LightGray].
+ * @param rowBorderWidth The width of the border for the table rows in DP, by default it will be "0.4.dp".
+ * @param rowTextStyle The text style to apply to the data cells in the table rows, by default it will be [MaterialTheme.typography.bodySmall].
+ * @param tableElevation The elevation of the entire table (Card elevation) in DP, by default it will be "6.dp".
+ * @param shape The shape of the table's corners, by default it will be "RoundedCornerShape(4.dp)".
+ */
 @Composable
 inline fun <reified T : Any> BeeTablesCompose(
     data: List<T>,
