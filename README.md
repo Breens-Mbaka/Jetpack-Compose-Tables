@@ -38,6 +38,8 @@
 
 To use the BeeTablesCompose library, follow these steps:
 
+- Make sure your target JAVA SDK version is VERSION_17
+
 - Add the Material3 dependency;
 
 ```
