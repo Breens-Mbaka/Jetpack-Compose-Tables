@@ -70,6 +70,15 @@ dependencies {
 <p align="center">
 <img src="https://github.com/Breens-Mbaka/AnimeFollowKMM/assets/72180010/42f7fab4-cfe4-4236-968c-4a6eda006b0f" />
 
+# Want a new shiny feature 🪩✨
+- If you want to request a new feature please first read this [short guide](https://github.com/Breens-Mbaka/BeeTablesCompose/blob/master/.github/ISSUE_TEMPLATE/feature_request.md)
+
+# Want to report a bug 🐞
+- If you want to report a bug please first read this [short guide](https://github.com/Breens-Mbaka/BeeTablesCompose/blob/master/.github/ISSUE_TEMPLATE/bug_report.md)
+
+# Want to contribute 🛠
+- If you want to contribute please first read this [short guide](https://github.com/Breens-Mbaka/BeeTablesCompose/blob/master/.github/ISSUE_TEMPLATE/pull_request_template.md)
+
 # Find this repository useful? :heart:
 
 Support it by joining _
