@@ -53,7 +53,7 @@ implementation("androidx.compose.material3:material3:1.1.1")
 
 ```gradle
 dependencies {
-    implementation("com.breens.bee-tables-compose:1.0.0")
+    implementation("com.github.Breens-Mbaka:BeeTablesCompose:1.0.0")
 }
 ```
 

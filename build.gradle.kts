@@ -3,4 +3,37 @@ plugins {
     id("com.android.application") version "8.1.0-beta02" apply false
     id("org.jetbrains.kotlin.android") version "1.8.10" apply false
     id("com.android.library") version "8.1.0-beta02" apply false
+    id("com.diffplug.spotless") version "6.19.0" apply false
 }
+
+subprojects {
+    apply(plugin = "com.diffplug.spotless")
+    configure<com.diffplug.gradle.spotless.SpotlessExtension> {
+        kotlin {
+            target(
+                fileTree(".") {
+                    include("**/*.kt")
+                    exclude("spotless/copyright.kt", "**/build/**")
+                },
+            )
+            ktlint()
+            licenseHeaderFile(rootProject.file("spotless/copyright.kt"))
+            trimTrailingWhitespace()
+            endWithNewline()
+        }
+        format("kts") {
+            target("**/*.kts")
+            targetExclude("$buildDir/**/*.kts")
+            licenseHeaderFile(rootProject.file("spotless/copyright.kt"), "(^(?![\\/ ]\\*).*$)")
+            trimTrailingWhitespace()
+            endWithNewline()
+        }
+    }
+
+    afterEvaluate {
+        tasks.named("preBuild") {
+            dependsOn("spotlessApply")
+        }
+    }
+}
+
