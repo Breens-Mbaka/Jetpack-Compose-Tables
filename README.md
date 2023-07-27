@@ -8,7 +8,7 @@
 </p><br>
 
 <p align="center">
-:bee:  A Compose UI data table library which allows developers to seamless integrate visually appealing and customizable tables to their Android apps or IOS apps(NOTE🚨: Its Material 3 first).
+:bee:  A Compose UI data table library which allows developers to seamless integrate visually appealing and customizable tables to their Android apps or IOS apps.
 </p><br>
 
 <p align="center">
