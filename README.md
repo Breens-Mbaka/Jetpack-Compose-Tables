@@ -17,13 +17,18 @@
 
 - Display tabular data with ease: The library allows you to display a list of data items in a
   well-organized table format.
+
 - Customizable header titles: Customize the appearance of header titles with options for border
   color, width, text style, and background color.
+
 - Alternating row colors: Easily set up alternating background colors for rows, enhancing the visual
   presentation of your data.
+
 - Styling options: Customize the appearance of table rows, including border color, width, and text
   style.
+
 - Table elevation: Control the elevation of the entire table with a customizable elevation value.
+
 - Rounded corners: Set the shape of the table's corners, with a default rounded corner shape for a
   sleek look.
 
@@ -31,19 +36,34 @@
 
 To use the BeeTablesCompose library, follow these steps:
 
-- Add the dependency: Include the library in your project's dependencies. You can use Maven or
-  Gradle to add it as a dependency.
+- Add the Material3 dependency;
+
+```
+implementation("androidx.compose.material3:material3:1.1.1")
+```
+
+- Add this to your **project** ```build.gradle``` file or ```settings.gradle.kts``` file, depending
+  on which version of Android Studio you are using;
+
+```
+implementation("androidx.compose.material3:material3:1.1.1")
+```
+
+- Add the dependency: Include the library in your project's dependencies;
 
 ```gradle
 dependencies {
-    // Still in development 🦺🛠
+    implementation("com.breens.bee-tables-compose:1.0.0")
 }
 ```
 
 - Import the library: Import the BeeTablesCompose function into your Compose-based project.
+
 - Prepare your data: Organize your data in a list of objects to be displayed in the table.
+
 - Define the header titles: Create a list of header titles that will be displayed at the top of the
   table.
+
 - Use the BeeTablesCompose function: Invoke the BeeTablesCompose function with your data and header
   titles as parameters to generate the data table.
 
@@ -59,18 +79,13 @@ Also __[follow](https://github.com/Breens-Mbaka)__ me for my next creations! �
 </p>
 
 # License
+
 ```xml
 Designed and developed by 2023 Breens Mbaka (Breens Mbaka)
 
-        Licensed under the Apache License, Version 2.0 (the "License");
-        you may not use this file except in compliance with the License.
-        You may obtain a copy of the License at
+    Licensed under the Apache License, Version 2.0 (the "License");you may not use this file except in compliance with the License.You may obtain a copy of the License at
 
-        http://www.apache.org/licenses/LICENSE-2.0
+    http://www.apache.org/licenses/LICENSE-2.0
 
-        Unless required by applicable law or agreed to in writing, software
-        distributed under the License is distributed on an "AS IS" BASIS,
-        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-        See the License for the specific language governing permissions and
-        limitations under the License.
+    Unless required by applicable law or agreed to in writing, softwaredistributed under the License is distributed on an "AS IS" BASIS,WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.See the License for the specific language governing permissions andlimitations under the License.
 ```
