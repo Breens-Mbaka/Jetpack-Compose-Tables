@@ -38,15 +38,6 @@
 
 To use the BeeTablesCompose library, follow these steps:
 
-- Make sure your target **JAVA SDK VERSION_17** since the target version of the library was built with **JAVA SDK VERSION_17.**
-
-- Add this to your **project** ```build.gradle``` file or ```settings.gradle.kts``` file, depending
-  on which version of Android Studio you are using;
-
-```
-implementation("androidx.compose.material3:material3:1.1.1")
-```
-
 - Add the dependency: Include the library in your project's dependencies;
 
 ```gradle
