@@ -1,18 +1,18 @@
 <h2 align="center">BeeTablesCompose</h2></br>
 
 <p align="center">
-
 <a href="https://opensource.org/licenses/Apache-2.0"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></a>
 <a href="https://android-arsenal.com/api?level=21+"><img alt="API" src="https://img.shields.io/badge/API-15%2B-brightgreen.svg?style=flat"/></a>
-</p> <br>
+</p><br>
 
 <p align="center">
 :bee:  A Compose UI data table library which allows developers to seamless integrate visually appealing and customizable tables to their Android apps or IOS apps.
-</p></br>
+</p><br>
 
+# Expected Outcome
 <p align="center">
-<img src="https://github.com/Breens-Mbaka/AnimeFollowKMM/assets/72180010/1b3e239e-9b4b-4bde-a9f1-085878bdf94a" />
-</p>
+<img src ="https://github.com/Breens-Mbaka/AnimeFollowKMM/assets/72180010/1b3e239e-9b4b-4bde-a9f1-085878bdf94a" width="250"/>
+</p><br>
 
 # More About 🐝 BeeTablesCompose
 
@@ -51,7 +51,7 @@ dependencies {
 <p align="center">
 <img src="https://github.com/Breens-Mbaka/AnimeFollowKMM/assets/72180010/42f7fab4-cfe4-4236-968c-4a6eda006b0f" />
 
-### Find this repository useful? :heart:
+# Find this repository useful? :heart:
 
 Support it by joining _
 _[stargazers](https://github.com/Breens-Mbaka/Searchable-Dropdown-Menu-Jetpack-Compose/stargazers)__
