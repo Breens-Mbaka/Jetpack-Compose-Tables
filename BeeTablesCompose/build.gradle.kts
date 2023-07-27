@@ -86,7 +86,7 @@ afterEvaluate {
                 from(components["release"])
                 groupId = "com.breens.beetablescompose"
                 artifactId = "bee-tables-compose"
-                version = "1.0.0"
+                version = "1.0.2"
             }
         }
     }
