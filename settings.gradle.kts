@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "BeeTablesCompose"
 include(":app")
+include(":BeeTablesCompose")
