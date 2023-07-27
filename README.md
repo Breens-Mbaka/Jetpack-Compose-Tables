@@ -10,10 +10,6 @@
 </p><br>
 
 <p align="center">
-Expected Outcome
-</p><br>
-
-<p align="center">
 <img src ="https://github.com/Breens-Mbaka/AnimeFollowKMM/assets/72180010/1b3e239e-9b4b-4bde-a9f1-085878bdf94a" width="250"/>
 </p><br>
 
@@ -31,7 +27,7 @@ Expected Outcome
 - Rounded corners: Set the shape of the table's corners, with a default rounded corner shape for a
   sleek look.
 
-# How To Use 🤔
+# Getting Started 🦺
 
 To use the BeeTablesCompose library, follow these steps:
 

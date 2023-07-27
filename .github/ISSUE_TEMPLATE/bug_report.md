@@ -34,5 +34,8 @@ If applicable, add screenshots to help explain your problem.
  - Browser [e.g. stock browser, safari]
  - Version [e.g. 22]
 
+**BeeTablesCompose Library Version**
+  - Library version: [1.0.0]
+
 **Additional context**
 Add any other context about the problem here.
