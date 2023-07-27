@@ -53,7 +53,7 @@ dependencies {
 # Find this repository useful? :heart:
 
 Support it by joining _
-_[stargazers](https://github.com/Breens-Mbaka/Searchable-Dropdown-Menu-Jetpack-Compose/stargazers)__
+_[stargazers](https://github.com/Breens-Mbaka/BeeTablesCompose/stargazers)__
 for this repository. :star: <br>
 Also __[follow](https://github.com/Breens-Mbaka)__ me for my next creations! 🤩
 </p>
