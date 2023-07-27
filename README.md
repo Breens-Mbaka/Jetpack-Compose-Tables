@@ -2,7 +2,9 @@
 
 <p align="center">
 <a href="https://opensource.org/licenses/Apache-2.0"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></a>
-<a href="https://android-arsenal.com/api?level=21+"><img alt="API" src="https://img.shields.io/badge/API-15%2B-brightgreen.svg?style=flat"/></a>
+<a href="https://android-arsenal.com/api?level=21+"><img alt="API" src="https://img.shields.io/badge/API-21%2B-brightgreen.svg?style=flat"/></a>
+<a href="https://github.com/Breens-Mbaka/BeeTablesCompose/actions"><img alt="Build Status" src="https://github.com/Breens-Mbaka/BeeTablesCompose/workflows/Android%20CI/badge.svg"/></a>
+<a href="https://jitpack.io/#Breens-Mbaka/BeeTablesCompose"><img alt="Build Status" src="https://jitpack.io/v/Breens-Mbaka/BeeTablesCompose.svg"/></a>
 </p><br>
 
 <p align="center">
@@ -53,7 +55,7 @@ implementation("androidx.compose.material3:material3:1.1.1")
 
 ```gradle
 dependencies {
-    implementation("com.github.Breens-Mbaka:BeeTablesCompose:1.0.0")
+    implementation("com.github.Breens-Mbaka:BeeTablesCompose:1.0.2")
 }
 ```
 
