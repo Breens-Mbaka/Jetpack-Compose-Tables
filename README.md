@@ -38,11 +38,20 @@
 
 To use the BeeTablesCompose library, follow these steps:
 
+- Add this to either your **project build.gradle** file or **setting.gradle**, depending with what version of Android Studio you are using;
+
+```gradle
+repositories {
+        ...
+        maven(url = "https://jitpack.io")
+}
+```
+
 - Add the dependency: Include the library in your project's dependencies;
 
 ```gradle
 dependencies {
-    implementation("com.github.Breens-Mbaka:BeeTablesCompose:1.0.2")
+    implementation("com.github.Breens-Mbaka:BeeTablesCompose:1.0.3")
 }
 ```
 
@@ -57,7 +66,7 @@ dependencies {
   titles as parameters to generate the data table.
 
 <p align="center">
-<img src="https://github.com/Breens-Mbaka/AnimeFollowKMM/assets/72180010/42f7fab4-cfe4-4236-968c-4a6eda006b0f" />
+<img src="https://github.com/Breens-Mbaka/BeeTablesCompose/assets/72180010/080af6c1-a4c1-43dd-9530-a392aebaf13a" />
 
 # Want a new shiny feature 🪩✨
 - If you want to request a new feature please first read this [short guide](https://github.com/Breens-Mbaka/BeeTablesCompose/blob/master/.github/ISSUE_TEMPLATE/feature_request.md)
