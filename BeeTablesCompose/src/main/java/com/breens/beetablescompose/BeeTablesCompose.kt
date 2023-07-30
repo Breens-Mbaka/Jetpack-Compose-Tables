@@ -35,6 +35,7 @@ import com.breens.beetablescompose.utils.extractMembers
  * 🐝 A Compose UI data table library.
  *
  * @param data The list of data items to display in the table.
+ * @param enableTableHeaderTitles show or hide the table header titles. If not set, by default the table header titles will be shown.
  * @param headerTableTitles The list of header titles to display at the top of the table.
  * @param headerTitlesBorderColor The color of the border for the header titles, by default it will be [Color.LightGray].
  * @param headerTitlesBorderWidth The width of the border for the header titles in DP, by default it will be "0.4.dp".
@@ -50,6 +51,7 @@ import com.breens.beetablescompose.utils.extractMembers
 @Composable
 inline fun <reified T : Any> BeeTablesCompose(
     data: List<T>,
+    enableTableHeaderTitles: Boolean = true,
     headerTableTitles: List<String>,
     headerTitlesBorderColor: Color = Color.LightGray,
     headerTitlesBorderWidth: Dp = 0.4.dp,
@@ -64,13 +66,15 @@ inline fun <reified T : Any> BeeTablesCompose(
 ) {
     Card(elevation = CardDefaults.cardElevation(defaultElevation = tableElevation)) {
         Column(modifier = Modifier.clip(shape = shape)) {
-            TableHeaderComponent(
-                headerTableTitles = headerTableTitles,
-                headerTitlesBorderColor = headerTitlesBorderColor,
-                headerTitlesBorderWidth = headerTitlesBorderWidth,
-                headerTitlesTextStyle = headerTitlesTextStyle,
-                headerTitlesBackGroundColor = headerTitlesBackGroundColor,
-            )
+            if (enableTableHeaderTitles) {
+                TableHeaderComponent(
+                    headerTableTitles = headerTableTitles,
+                    headerTitlesBorderColor = headerTitlesBorderColor,
+                    headerTitlesBorderWidth = headerTitlesBorderWidth,
+                    headerTitlesTextStyle = headerTitlesTextStyle,
+                    headerTitlesBackGroundColor = headerTitlesBackGroundColor,
+                )
+            }
 
             data.forEachIndexed { index, data ->
                 val rowData = extractMembers(data).map {
