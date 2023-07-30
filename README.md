@@ -66,7 +66,7 @@ dependencies {
   titles as parameters to generate the data table.
 
 <p align="center">
-<img src="https://github.com/Breens-Mbaka/BeeTablesCompose/assets/72180010/080af6c1-a4c1-43dd-9530-a392aebaf13a" />
+<img src="https://github.com/Breens-Mbaka/BeeTablesCompose/assets/72180010/f5ea94a1-df41-472c-91e2-03d6cb7dc82f" />
 
 # Want a new shiny feature 🪩✨
 - If you want to request a new feature please first read this [short guide](https://github.com/Breens-Mbaka/BeeTablesCompose/blob/master/.github/ISSUE_TEMPLATE/feature_request.md)
