@@ -16,7 +16,9 @@
 package com.breens.beetablescompose
 
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
@@ -65,7 +67,11 @@ inline fun <reified T : Any> BeeTablesCompose(
     shape: RoundedCornerShape = RoundedCornerShape(4.dp),
 ) {
     Card(elevation = CardDefaults.cardElevation(defaultElevation = tableElevation)) {
-        Column(modifier = Modifier.clip(shape = shape)) {
+        Column(
+            modifier = Modifier
+                .clip(shape = shape)
+                .verticalScroll(rememberScrollState()),
+        ) {
             if (enableTableHeaderTitles) {
                 TableHeaderComponent(
                     headerTableTitles = headerTableTitles,
