@@ -23,10 +23,12 @@ data class Teams(
 )
 
 val premierLeagueTeams = listOf(
-    Teams("Arsenal", "4", "2", "14"),
-    Teams("Chelsea", "5", "3", "18"),
-    Teams("Manchester United", "6", "1", "19"),
-    Teams("Liverpool", "4", "4", "16"),
+    Teams("Manchester United", "1", "2", "14"),
+    Teams("Manchester City", "5", "3", "18"),
+    Teams("Chelsea", "22", "1", "19"),
+    Teams("Arsenal", "4", "4", "23"),
+    Teams("Liverpool", "21", "1", "23"),
+    Teams("Tottenham", "1", "1", "3"),
     // Add more teams as needed
 )
 
