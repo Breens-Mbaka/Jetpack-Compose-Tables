@@ -21,6 +21,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -39,24 +40,30 @@ import androidx.compose.ui.unit.dp
 fun TableRowComponent(
     data: List<String>,
     rowBorderColor: Color,
-    rowBorderWidth: Dp,
     rowTextStyle: TextStyle,
     rowBackGroundColor: Color,
+    contentAlignment: Alignment,
+    textAlign: TextAlign,
+    tablePadding: Dp,
+    columnToIndexIncreaseWidth: Int?,
+    dividerThickness: Dp,
 ) {
     Row(
         Modifier
             .fillMaxWidth()
-            .background(rowBackGroundColor),
+            .background(rowBackGroundColor)
+            .padding(tablePadding),
     ) {
-        data.forEach { title ->
+        data.forEachIndexed { index, title ->
+            val weight = if (index == columnToIndexIncreaseWidth) 8f else 2f
             Box(
                 modifier = Modifier
-                    .weight(.3f)
+                    .weight(weight)
                     .border(
-                        width = rowBorderWidth,
+                        width = dividerThickness,
                         color = rowBorderColor,
                     ),
-                contentAlignment = Alignment.Center,
+                contentAlignment = contentAlignment,
             ) {
                 Text(
                     text = title,
@@ -64,8 +71,9 @@ fun TableRowComponent(
                     overflow = TextOverflow.Ellipsis,
                     modifier = Modifier
                         .height(38.dp)
-                        .wrapContentHeight(),
-                    textAlign = TextAlign.Center,
+                        .wrapContentHeight()
+                        .padding(end = 8.dp),
+                    textAlign = textAlign,
                 )
             }
         }
@@ -77,32 +85,15 @@ fun TableRowComponent(
 fun TableRowComponentPreview() {
     val titles = listOf("Man Utd", "26", "7", "95")
 
-    Row(
-        Modifier
-            .fillMaxWidth()
-            .background(Color.White),
-    ) {
-        titles.forEach { title ->
-            Box(
-                modifier = Modifier
-                    .weight(.3f)
-                    .border(
-                        width = 0.4.dp,
-                        color = Color.LightGray,
-                    ),
-                contentAlignment = Alignment.Center,
-            ) {
-                Text(
-                    text = title,
-                    style = MaterialTheme.typography.bodySmall,
-                    color = Color.Black,
-                    overflow = TextOverflow.Ellipsis,
-                    modifier = Modifier
-                        .height(38.dp)
-                        .wrapContentHeight(),
-                    textAlign = TextAlign.Center,
-                )
-            }
-        }
-    }
+    TableRowComponent(
+        data = titles,
+        rowBorderColor = Color.LightGray,
+        rowTextStyle = MaterialTheme.typography.bodySmall,
+        rowBackGroundColor = Color.White,
+        contentAlignment = Alignment.Center,
+        textAlign = TextAlign.Center,
+        tablePadding = 0.dp,
+        columnToIndexIncreaseWidth = null,
+        dividerThickness = 1.dp,
+    )
 }

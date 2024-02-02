@@ -16,13 +16,14 @@
 package com.breens.beetablescompose.components
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentHeight
+import androidx.compose.material3.Divider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -37,61 +38,64 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun TableHeaderComponent(
+fun TableHeaderComponentWithoutColumnDividers(
     headerTableTitles: List<String>,
-    headerTitlesBorderColor: Color,
     headerTitlesTextStyle: TextStyle,
     headerTitlesBackGroundColor: Color,
+    dividerThickness: Dp,
     contentAlignment: Alignment,
     textAlign: TextAlign,
     tablePadding: Dp,
     columnToIndexIncreaseWidth: Int?,
-    dividerThickness: Dp,
 ) {
-    Row(
-        Modifier
-            .fillMaxWidth()
-            .background(headerTitlesBackGroundColor)
-            .padding(horizontal = tablePadding),
-    ) {
-        headerTableTitles.forEachIndexed { index, title ->
-            val weight = if (index == columnToIndexIncreaseWidth) 8f else 2f
-            Box(
-                modifier = Modifier
-                    .weight(weight)
-                    .border(
-                        width = dividerThickness,
-                        color = headerTitlesBorderColor,
-                    ),
-                contentAlignment = contentAlignment,
-            ) {
-                Text(
-                    text = title,
-                    style = headerTitlesTextStyle,
-                    overflow = TextOverflow.Ellipsis,
+    Column {
+        Row(
+            Modifier
+                .fillMaxWidth()
+                .background(headerTitlesBackGroundColor)
+                .padding(horizontal = tablePadding),
+        ) {
+            headerTableTitles.forEachIndexed { index, title ->
+                val weight = if (index == columnToIndexIncreaseWidth) 8f else 2f
+                Box(
                     modifier = Modifier
-                        .height(38.dp)
-                        .wrapContentHeight(),
-                    textAlign = textAlign,
-                )
+                        .weight(weight),
+                    contentAlignment = contentAlignment,
+                ) {
+                    Text(
+                        text = title,
+                        style = headerTitlesTextStyle,
+                        overflow = TextOverflow.Ellipsis,
+                        modifier = Modifier
+                            .height(38.dp)
+                            .wrapContentHeight(),
+                        textAlign = textAlign,
+                    )
+                }
             }
         }
+        Divider(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(dividerThickness)
+                .background(headerTitlesBackGroundColor),
+        )
     }
 }
 
 @Composable
 @Preview(showBackground = true)
-fun TableHeaderComponentPreview() {
+fun TableHeaderComponentWithoutColumnDividersPreview() {
     val titles = listOf("Team", "Home", "Away", "Points")
-    TableHeaderComponent(
+
+    TableHeaderComponentWithoutColumnDividers(
         headerTableTitles = titles,
-        headerTitlesBorderColor = Color.Black,
-        headerTitlesTextStyle = MaterialTheme.typography.labelMedium,
-        headerTitlesBackGroundColor = Color.LightGray,
+        headerTitlesTextStyle = MaterialTheme.typography.bodySmall,
+        headerTitlesBackGroundColor = Color.White,
+        dividerThickness = 1.dp,
         contentAlignment = Alignment.Center,
         textAlign = TextAlign.Center,
         tablePadding = 0.dp,
         columnToIndexIncreaseWidth = null,
-        dividerThickness = 1.dp,
     )
 }
