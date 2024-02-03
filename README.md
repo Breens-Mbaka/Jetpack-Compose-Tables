@@ -11,9 +11,7 @@
 :bee:  A Compose UI data table library which allows developers to seamless integrate visually appealing and customizable tables to their Android apps or IOS apps.
 </p><br>
 
-<p align="center">
 https://github.com/Breens-Mbaka/BeeTablesCompose/assets/72180010/996cb574-766e-45f8-b459-6e7245da17bc
-</p><br>
 
 # Features 🌟
 
