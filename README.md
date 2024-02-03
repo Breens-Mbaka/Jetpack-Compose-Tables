@@ -12,7 +12,7 @@
 </p><br>
 
 <p align="center">
-<img src ="https://github.com/Breens-Mbaka/BeeTablesCompose/assets/72180010/996cb574-766e-45f8-b459-6e7245da17bc" width="250"/>
+https://github.com/Breens-Mbaka/BeeTablesCompose/assets/72180010/996cb574-766e-45f8-b459-6e7245da17bc
 </p><br>
 
 # Features 🌟
