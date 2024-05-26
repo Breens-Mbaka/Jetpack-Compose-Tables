@@ -36,6 +36,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import com.breens.beetablescompose.utils.lightGray
 
 @Composable
 fun TableRowComponentWithoutDividers(
@@ -94,9 +95,9 @@ fun TableRowComponentWithoutDividersPreview() {
     TableRowComponentWithoutDividers(
         data = titles,
         rowTextStyle = MaterialTheme.typography.bodySmall,
-        rowBackGroundColor = Color.White,
+        rowBackGroundColor = MaterialTheme.colorScheme.background,
         dividerThickness = 1.dp,
-        horizontalDividerColor = Color.LightGray,
+        horizontalDividerColor = lightGray(),
         contentAlignment = Alignment.Center,
         textAlign = TextAlign.Center,
         tablePadding = 0.dp,

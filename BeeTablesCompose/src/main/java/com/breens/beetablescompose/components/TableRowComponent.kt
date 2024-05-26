@@ -35,6 +35,8 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import com.breens.beetablescompose.utils.lightColor
+import com.breens.beetablescompose.utils.lightGray
 
 @Composable
 fun TableRowComponent(
@@ -87,9 +89,9 @@ fun TableRowComponentPreview() {
 
     TableRowComponent(
         data = titles,
-        rowBorderColor = Color.LightGray,
+        rowBorderColor = lightGray(),
         rowTextStyle = MaterialTheme.typography.bodySmall,
-        rowBackGroundColor = Color.White,
+        rowBackGroundColor = lightColor(),
         contentAlignment = Alignment.Center,
         textAlign = TextAlign.Center,
         tablePadding = 0.dp,

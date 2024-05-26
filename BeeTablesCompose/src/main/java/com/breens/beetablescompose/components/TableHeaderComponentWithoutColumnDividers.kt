@@ -36,6 +36,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import com.breens.beetablescompose.utils.lightColor
 
 @Composable
 fun TableHeaderComponentWithoutColumnDividers(
@@ -91,7 +92,7 @@ fun TableHeaderComponentWithoutColumnDividersPreview() {
     TableHeaderComponentWithoutColumnDividers(
         headerTableTitles = titles,
         headerTitlesTextStyle = MaterialTheme.typography.bodySmall,
-        headerTitlesBackGroundColor = Color.White,
+        headerTitlesBackGroundColor = lightColor(),
         dividerThickness = 1.dp,
         contentAlignment = Alignment.Center,
         textAlign = TextAlign.Center,
