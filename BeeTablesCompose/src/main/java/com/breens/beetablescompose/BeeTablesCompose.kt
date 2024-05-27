@@ -33,6 +33,8 @@ import com.breens.beetablescompose.components.TableHeaderComponentWithoutColumnD
 import com.breens.beetablescompose.components.TableRowComponent
 import com.breens.beetablescompose.components.TableRowComponentWithoutDividers
 import com.breens.beetablescompose.utils.extractMembers
+import com.breens.beetablescompose.utils.lightColor
+import com.breens.beetablescompose.utils.lightGray
 
 /**
  * 🐝 A Compose UI data table library.
@@ -61,21 +63,24 @@ inline fun <reified T : Any> BeeTablesCompose(
     data: List<T>,
     enableTableHeaderTitles: Boolean = true,
     headerTableTitles: List<String>,
-    headerTitlesBorderColor: Color = Color.LightGray,
+    headerTitlesBorderColor: Color = lightGray(),
     headerTitlesTextStyle: TextStyle = MaterialTheme.typography.bodySmall,
-    headerTitlesBackGroundColor: Color = Color.White,
-    tableRowColors: List<Color> = listOf(Color.White, Color.White),
-    rowBorderColor: Color = Color.LightGray,
+    headerTitlesBackGroundColor: Color = lightColor(),
+    tableRowColors: List<Color> = listOf(
+        lightColor(),
+        lightColor(),
+    ),
+    rowBorderColor: Color = lightGray(),
     rowTextStyle: TextStyle = MaterialTheme.typography.bodySmall,
     tableElevation: Dp = 0.dp,
     shape: RoundedCornerShape = RoundedCornerShape(4.dp),
     borderStroke: BorderStroke = BorderStroke(
         width = 1.dp,
-        color = Color.LightGray,
+        color = lightGray(),
     ),
     disableVerticalDividers: Boolean = false,
     dividerThickness: Dp = 1.dp,
-    horizontalDividerColor: Color = Color.LightGray,
+    horizontalDividerColor: Color = lightGray(),
     contentAlignment: Alignment = Alignment.Center,
     textAlign: TextAlign = TextAlign.Center,
     tablePadding: Dp = 0.dp,

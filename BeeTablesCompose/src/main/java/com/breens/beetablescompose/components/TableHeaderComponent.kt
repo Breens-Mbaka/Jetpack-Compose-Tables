@@ -35,6 +35,8 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import com.breens.beetablescompose.utils.darkColor
+import com.breens.beetablescompose.utils.lightGray
 
 @Composable
 fun TableHeaderComponent(
@@ -85,9 +87,9 @@ fun TableHeaderComponentPreview() {
     val titles = listOf("Team", "Home", "Away", "Points")
     TableHeaderComponent(
         headerTableTitles = titles,
-        headerTitlesBorderColor = Color.Black,
+        headerTitlesBorderColor = darkColor(),
         headerTitlesTextStyle = MaterialTheme.typography.labelMedium,
-        headerTitlesBackGroundColor = Color.LightGray,
+        headerTitlesBackGroundColor = lightGray(),
         contentAlignment = Alignment.Center,
         textAlign = TextAlign.Center,
         tablePadding = 0.dp,
