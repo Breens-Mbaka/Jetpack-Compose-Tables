@@ -49,7 +49,7 @@ repositories {
 
 ```gradle
 dependencies {
-    implementation("com.github.Breens-Mbaka:BeeTablesCompose:1.0.5")
+    implementation("com.github.Breens-Mbaka:BeeTablesCompose:1.2.0")
 }
 ```
 
