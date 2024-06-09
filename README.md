@@ -53,6 +53,8 @@ dependencies {
 }
 ```
 
+# Usage
+
 - Import the library: Import the BeeTablesCompose function into your Compose-based project.
 
 - Prepare your data: Organize your data in a list of objects to be displayed in the table.
@@ -65,6 +67,17 @@ dependencies {
 
 <p align="center">
 <img src="https://github.com/Breens-Mbaka/BeeTablesCompose/assets/72180010/f5ea94a1-df41-472c-91e2-03d6cb7dc82f" />
+
+# NOTE ⚠️🚨
+- Before building a release APK of your app, if you have enabled minification, make sure to annotate your table data classes with @Keep. This will prevent the class from being removed at runtime.
+```kotlin
+@Keep
+data class User(
+  val name: String,
+  val email: Int,
+  val city: String
+)
+```
 
 # Want a new shiny feature 🪩✨
 - If you want to request a new feature please first read this [short guide](https://github.com/Breens-Mbaka/BeeTablesCompose/blob/master/.github/ISSUE_TEMPLATE/feature_request.md)
