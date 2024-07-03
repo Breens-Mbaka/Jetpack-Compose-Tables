@@ -15,8 +15,10 @@
  */
 package com.breens.beetablescompose.components
 
+import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -29,6 +31,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
@@ -49,6 +52,7 @@ fun TableRowComponent(
     tablePadding: Dp,
     columnToIndexIncreaseWidth: Int?,
     dividerThickness: Dp,
+    onRowClick: (Int) -> Unit = {},
 ) {
     Row(
         Modifier
@@ -64,7 +68,8 @@ fun TableRowComponent(
                     .border(
                         width = dividerThickness,
                         color = rowBorderColor,
-                    ),
+                    )
+                    .clickable { onRowClick(index) },
                 contentAlignment = contentAlignment,
             ) {
                 Text(
@@ -85,11 +90,13 @@ fun TableRowComponent(
 @Composable
 @Preview(showBackground = true)
 fun TableRowComponentPreview() {
+    val context = LocalContext.current
     val titles = listOf("Man Utd", "26", "7", "95")
 
     TableRowComponent(
         data = titles,
         rowBorderColor = lightGray(),
+        onRowClick = { Toast.makeText(context, "Row ...${titles[it]},", Toast.LENGTH_SHORT).show() },
         rowTextStyle = MaterialTheme.typography.bodySmall,
         rowBackGroundColor = lightColor(),
         contentAlignment = Alignment.Center,
