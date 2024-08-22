@@ -85,6 +85,7 @@ inline fun <reified T : Any> BeeTablesCompose(
     textAlign: TextAlign = TextAlign.Center,
     tablePadding: Dp = 0.dp,
     columnToIndexIncreaseWidth: Int? = null,
+    crossinline onRowClick: (Int) -> Unit = {},
 ) {
     OutlinedCard(
         elevation = CardDefaults.cardElevation(defaultElevation = tableElevation),
@@ -142,6 +143,7 @@ inline fun <reified T : Any> BeeTablesCompose(
                         textAlign = textAlign,
                         tablePadding = tablePadding,
                         columnToIndexIncreaseWidth = columnToIndexIncreaseWidth,
+                        onRowClick = { onRowClick(it) },
                     )
                 } else {
                     TableRowComponent(
@@ -154,6 +156,8 @@ inline fun <reified T : Any> BeeTablesCompose(
                         textAlign = textAlign,
                         tablePadding = tablePadding,
                         columnToIndexIncreaseWidth = columnToIndexIncreaseWidth,
+                        onRowClick = { onRowClick(it) },
+
                     )
                 }
             }
