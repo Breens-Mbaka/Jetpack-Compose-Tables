@@ -16,7 +16,6 @@
 package com.breens.beetablescompose.components
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -50,7 +49,6 @@ fun TableRowComponentWithoutDividers(
     textAlign: TextAlign,
     tablePadding: Dp,
     columnToIndexIncreaseWidth: Int?,
-    onRowClick: (Int) -> Unit = {},
 ) {
     Column(
         modifier = Modifier.padding(horizontal = tablePadding),
@@ -64,10 +62,8 @@ fun TableRowComponentWithoutDividers(
                 val weight = if (index == columnToIndexIncreaseWidth) 8f else 2f
                 Box(
                     modifier = Modifier
-                        .weight(weight)
-                        .clickable { onRowClick(index) },
+                        .weight(weight),
                     contentAlignment = contentAlignment,
-
                 ) {
                     Text(
                         text = title,
