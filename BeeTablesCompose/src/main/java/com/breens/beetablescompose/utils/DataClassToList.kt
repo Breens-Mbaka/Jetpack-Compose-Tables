@@ -36,7 +36,7 @@ inline fun <reified T : Any> extractMembers(instance: T): List<Pair<String, Stri
 
     sortedProperties.forEach { member ->
         val name = member.name
-        val value = member.get(instance)?.toString() ?: "null"
+        val value = member.get(instance)?.toString() ?: "---"
         members.add(name to value)
     }
 
