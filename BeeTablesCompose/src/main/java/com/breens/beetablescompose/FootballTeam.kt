@@ -15,13 +15,21 @@
  */
 package com.breens.beetablescompose
 
-import androidx.compose.material3.ExperimentalMaterial3Api
-
-@OptIn(ExperimentalMaterial3Api::class)
-@RequiresOptIn(
-    level = RequiresOptIn.Level.ERROR,
-    message = "This is an experimental BeeTable API. It may change in the future without notice.",
+/*
+Expounded The Class For Previewing More Columns
+ */
+data class FootballTeam(
+    val team: String,
+    val wins: Int,
+    val draws: Int,
+    val losses: Int,
+    val goalsFor: Int,
+    val goalsAgainst: Int,
+    val goalDifference: Int,
+    val cleanSheets: Int,
+    val yellowCards: Int,
+    val redCards: Int,
+    val possession: Double,
+    val passes: Int,
+    val points: Int,
 )
-@Retention(AnnotationRetention.BINARY)
-@Target(AnnotationTarget.CLASS, AnnotationTarget.FUNCTION, AnnotationTarget.PROPERTY)
-annotation class ExperimentalBeeTableApi
